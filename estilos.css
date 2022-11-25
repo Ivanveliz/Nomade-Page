@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   background-color: #21819e !important;
   justify-content: space-between !important;
@@ -122,6 +126,26 @@ footer p {
 
 .redes a:hover {
   text-shadow: 0 0 5px #e2dfdb;
+}
+
+.subir {
+  height: 20px;
+  width: 20px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #60CAeb;
+  line-height: 20px;
+  border-radius: 50%;
+  transition: all 1s;
+  box-shadow: 0 0 10px #60CAeb;
+  transition: all 1s;
+}
+
+.subir:hover {
+  transform: scale(2);
 }
 
 .grid-contenedor {
