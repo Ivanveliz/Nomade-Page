@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="shortcut icon" href="../Img/logoBrujula.png" type="image/x-icon">
-    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="../estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,20 +14,21 @@
 </head>
 
 <body>
-    <div class="flex">
-        <header>
-            <div class="barraylogo">
+    <div class="grid-contenedorC">
+        <div class="item item1">
+            <header>
                 <a href="../index.html"><img id="logo" src="../Img/LOGOnomade.png" alt="logo"></a>
                 <div class="barra">
                     <ul>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="./productos.html">Productos</a></li>
                         <li><a href="./nosotros.html">Nosotros</a></li>
-                        <li><a href="./bitacora.html">Bitácoras</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-            </div>
-        </header>
+
+            </header>
+        </div>
 
 
         <div class="formulario">
@@ -57,28 +57,32 @@
                 <br>
                 <label for="Texto">Comentarios</label>
                 <br>
-                <textarea name="Texto" id="Texto" cols="50" rows="20" placeholder="Escribínos tu mensaje"></textarea>
+                <textarea name="Texto" id="Texto" cols="auto" rows="auto"
+                    placeholder="Escribínos tu mensaje"></textarea>
                 <br>
-                <input type="submit">
-                <input type="reset">
+                <input class="BotonC" type="submit">
+                <input class="BotonC" type="reset">
             </form>
         </div>
     </div>
 
 </body>
 <footer>
-    <div class="pie">
-        <div class="ub">
-            <i class="fa-solid fa-location-dot"></i> Rosario, Agentina
-        </div>
-        <div class="der"> <i class="fa-solid fa-motorcycle"></i> Nomade IND. Todos los derechos reservados.
-            <i class="fa-solid fa-motorcycle"></i>
-        </div>
-        <div class="redes"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.whatsapp.com/"> <i class="fa-brands fa-whatsapp"></i></a>
+    <div class="foot">
+        <div class="row">
+            <div class="ubicacion">
+                <p><i class="fa-solid fa-location-dot"></i> Rosario, Agentina</p></i>
+            </div>
+
+            <div class="derechos">
+                <p><i class="fa-solid fa-motorcycle"></i> Nomade IND. Todos los derechos
+                    reservados <i class="fa-solid fa-motorcycle"></i></p>
+            </div>
+            <div class="redes"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.whatsapp.com/"> <i class="fa-brands fa-whatsapp"></i></a>
+            </div>
         </div>
     </div>
-
 
 </footer>
 

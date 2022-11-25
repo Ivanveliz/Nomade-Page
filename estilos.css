@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Jacques+Francois+Shadow&family=Londrina+Shadow&family=Noto+Sans+Mono&family=Oswald:wght@200;400&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Edu+VIC+WA+NT+Beginner&family=Jacques+Francois+Shadow&family=Londrina+Shadow&family=Noto+Sans+Mono&family=Nunito:wght@300&family=Oswald:wght@200;400&family=Roboto&display=swap");
 /* barra de navegación */
 * {
   margin: 0;
@@ -8,26 +8,33 @@
 }
 
 .navbar {
-  background-color: #63968c !important;
+  background-color: #21819e !important;
+  justify-content: space-between !important;
+}
+
+.navbar-dark .navbar-brand {
+  padding-left: 10px !important;
 }
 
 ul a {
   color: #e2dfdb !important;
   font-size: 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
   font-weight: bolder;
   transition: all 1s;
+  padding-left: 30px !important;
+  padding-right: 10px !important;
 }
 
 ul li a:hover {
   transform: scale(1.2);
-  text-shadow: 0 0 5px #e2dfdb;
+  text-shadow: 0 0 10px #63968c;
 }
 
 /* texto dentro del carrusel */
 .carousel-caption {
-  background-color: rgba(99, 150, 140, 0.6);
-  height: 250px;
+  background-color: rgba(89, 135, 126, 0.8117647059);
   width: 400px;
   padding: 10px;
   border-radius: 10px;
@@ -37,56 +44,80 @@ ul li a:hover {
 h5 {
   font-family: "Anton", sans-serif;
   padding: 5px;
-  font-size: 40px;
+  font-size: 55px;
   text-align: left;
   color: #e2dfdb;
 }
 
 p {
+  font-size: 20px;
   text-align: left;
   padding: 5px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
+  color: #e2dfdb;
 }
 
 /* boton de ver mas */
 .carousel-caption button {
   margin-bottom: 5px;
   font-family: "Anton", sans-serif;
-  background-color: #63968c;
-  border: black solid;
+  background-color: #60CAeb;
   margin-left: 200px;
   transition: all 1s;
+  border: none !important;
+}
+.carousel-caption button a {
+  color: #e2dfdb !important;
+  text-decoration: none;
 }
 
 .carousel-caption button:hover {
-  background-color: #63968c;
+  background-color: #bbe8f6 !important;
+  border: none !important;
   transform: scale(1.2);
-  text-shadow: 0 0 5px #e2dfdb;
-  border: #e2dfdb solid !important;
 }
-
-.carousel-caption button a {
-  color: #e2dfdb;
-  text-decoration: none;
+.carousel-caption button:hover a:hover {
+  color: #1aa1cb !important;
 }
 
 /* estilos para footer */
 footer {
-  background-color: #63968c;
-  font-family: "Roboto", sans-serif;
+  background-color: #21819e;
   color: #e2dfdb;
-  padding: 10px;
-  font-size: 20px;
+  padding: 5px;
+}
+footer p {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
 }
 
-.redes {
+.container-fluid .row {
+  align-items: center;
+}
+.container-fluid .ubicacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-fluid .derechos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px !important;
+}
+.container-fluid .redes {
+  display: flex;
+  text-align: center;
+  justify-content: center;
   font-size: 30px;
-  letter-spacing: 6px;
+  letter-spacing: 2px;
   text-align: center;
 }
-.redes a {
+.container-fluid .redes a {
   text-decoration: none;
   color: #e2dfdb;
+  padding: 10px !important;
+  transition: all 1s !important;
 }
 
 .redes a:hover {
@@ -96,16 +127,18 @@ footer {
 .grid-contenedor {
   padding: 20px;
   display: grid;
-  grid-template-columns: 20% 35% auto;
+  grid-template-columns: 20% 35% 1fr;
   grid-template-rows: auto auto auto;
   justify-content: center;
   gap: 5px;
+  background-color: #e2dfdb;
+  width: 100%;
 }
 
 #logo {
-  width: 250px;
+  width: 200px;
   padding: 5px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .header {
@@ -144,52 +177,433 @@ footer {
 }
 
 .grid-contenedor {
-  padding: 20px;
+  gap: 20px;
 }
 .grid-contenedor .parrafo1 {
   margin: 30px;
 }
-.grid-contenedor .parrafo1 h2 {
+.grid-contenedor .parrafo1 h1 {
   margin-left: 10px;
   padding: 10px;
   font-family: "Anton", sans-serif !important;
-  color: #63968c;
+  color: #80aca3;
+  text-shadow: 0 0 5px black;
 }
-.grid-contenedor .parrafo1 h2 span {
+.grid-contenedor .parrafo1 h1 span {
   font-size: 40px;
 }
 
-.p1, .p2 {
+.p1,
+.p2 {
   width: auto;
   font-family: "Roboto", sans-serif;
   padding: 10px;
   text-align: justify;
   font-size: 20px;
   font-weight: lighter !important;
+  color: black;
 }
 
-.foto1, .foto2 {
-  padding: 5px;
+.foto1 {
   height: 400px;
   width: auto;
+  background-image: url(./Img/FP1.jpg);
+  background-position: left;
+  background-size: cover;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.foto2 {
+  height: 500px;
+  width: auto;
+  background-image: url(./Img/FP2.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  grid-column: 1/3;
+}
+
+.item5 {
+  grid-column: 3/4;
+}
+
+.boton {
+  background-color: #60CAeb;
+  padding: 10px;
+  border-radius: 5px;
+  float: right;
+  margin-right: 20px;
+  font-family: "Anton", sans-serif;
+  transition: all 1s;
+  text-decoration: none;
+  color: #e2dfdb;
+}
+
+.boton:hover {
+  background-color: #bbe8f6;
+  text-shadow: 0 0 5px #e2dfdb;
+  transform: scale(1.2);
+  color: #21819e;
+}
+
+.foot p {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+}
+.foot .row {
+  align-items: center;
+}
+.foot .ubicacion {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.foto1 .fot1, .foto1 .fot2, .foto2 .fot1, .foto2 .fot2 {
-  width: 400px;
+.foot .derechos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px !important;
+}
+.foot .redes {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.foot .redes a {
+  text-decoration: none;
+  color: #e2dfdb;
+  padding: 10px !important;
+  transition: all 1s;
+}
+
+.redes a:hover {
+  text-shadow: 0 0 5px #e2dfdb;
+  transform: scale(1.2);
+}
+
+.item3 {
+  background-image: url(./Img/n1.jpg);
+  height: auto;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  padding: 10px;
+  grid-column: 3/4 !important;
+}
+
+.flexN {
+  background-color: #4f776f;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.flexN .foto {
+  height: 450px;
+  width: 450px;
+  margin: 10px;
+}
+
+.n1 {
+  background-image: url(./Img/n2.jpg);
+  background-position: right;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.n2 {
+  background-image: url(./Img/n3.jpg);
+  background-position: right;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.n3 {
+  background-image: url(./Img/n4.jpg);
+  background-position: right;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.b1a {
   height: 400px;
+  width: 100%;
+  background-image: url(./Img/b1a\ .jpg);
   background-position: center;
   background-size: cover;
   border-radius: 5px;
 }
 
-.grid-contenedor .foto2 {
-  grid-column: 1/3;
-  width: auto;
+.grid-contB {
+  background-color: #63968c;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 30%));
+  gap: 10px;
+  justify-content: center;
+  grid-auto-flow: dense;
 }
-.grid-contenedor .foto2 .fot2 {
-  width: auto;
+.grid-contB p {
+  font-size: 16px;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  transition: all 1s;
+}
+.grid-contB p:hover {
+  text-shadow: 0 0 10px #21819e;
+  background-color: #33bbe5;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 18px;
 }
 
+.ancho {
+  grid-column: span 2;
+}
 
-/*# sourceMappingURL=estilos.css.map */
+.alto {
+  grid-row: span 2;
+}
+
+.b1 {
+  height: 400px;
+  background-image: url(./Img/b1\ .jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.b2 {
+  height: 400px;
+  background-image: url(./Img/b2.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.b3 {
+  height: 400px;
+  background-image: url(./Img/b2a.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.b4 {
+  height: 400px;
+  background-image: url(./Img/b5.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.b6 {
+  height: 400px;
+  background-image: url(./Img/b8.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.b7 {
+  height: 400px;
+  background-image: url(./Img/b4.jpg);
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.foto {
+  transition: all 1s;
+  display: flex;
+  align-items: flex-end;
+}
+
+.foto:hover {
+  transform: scale(1.025);
+}
+
+.grid-contenedorC {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-content: start;
+  background-color: #e2dfdb;
+  width: 100%;
+}
+
+.formulario {
+  margin-right: -20px;
+  width: auto;
+  margin-top: 50px;
+  grid-column: span 2;
+  background-image: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)), url(./Img/contacto.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 10px;
+}
+.formulario h1 {
+  font-size: 40px;
+  margin-left: 10px;
+  padding: 10px;
+  font-family: "Anton", sans-serif !important;
+  color: #63968c;
+  text-shadow: 0 0 5px black;
+}
+.formulario p {
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: lighter !important;
+  color: black;
+}
+.formulario form {
+  font-family: "Roboto", sans-serif !important;
+}
+.formulario input {
+  border: solid 2px #21819e !important;
+  margin: 5px;
+  border-radius: 5px;
+  height: 25px;
+  width: 200px;
+  padding: 5px;
+  transition: all 1s;
+}
+.formulario input:hover {
+  border: none !important;
+  transform: scale(1.1);
+  background-color: #60CAeb;
+}
+.formulario .BotonC {
+  border: none !important;
+  font-family: "Anton", sans-serif;
+  background-color: #60CAeb;
+  border-radius: 10px;
+}
+.formulario .BotonC:hover {
+  background-color: #bbe8f6 !important;
+  border: none !important;
+  transform: scale(1.05);
+}
+
+textarea {
+  border-radius: 5px;
+  border: solid 2px #21819e;
+  padding: 20px;
+  width: 90%;
+  height: auto;
+  outline: none;
+  resize: none;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: all 1s;
+}
+
+textarea:hover {
+  border: none !important;
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .container-fluid .row {
+    align-items: center;
+    justify-content: center;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .row .ubicacion,
+.row .redes,
+.row .derechos {
+    flex: none;
+    max-width: none;
+  }
+  .row .ubicacion p,
+.row .redes p,
+.row .derechos p {
+    text-align: center;
+  }
+  .grid-contenedor {
+    grid-template-columns: 1fr;
+  }
+  .grid-contenedor .parrafo1,
+.grid-contenedor .item5 {
+    grid-column: 1/3;
+    padding: 5px;
+    margin: 0;
+    display: grid;
+    justify-items: center;
+  }
+  .item1 {
+    padding: 15px;
+    display: grid;
+    justify-content: center;
+    grid-column: 1/4;
+  }
+  .foto1 {
+    background-position: center;
+    padding: 15px;
+    grid-column: 1/4;
+  }
+  .item5 {
+    grid-row: 5/4;
+    padding: 5px;
+  }
+  .foto2 {
+    grid-column: 1/4;
+    background-position: right;
+  }
+  .foot p {
+    text-align: center;
+  }
+  .grid-contenedor .parrafo1 {
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+  .grid-contenedor .item3 {
+    grid-column: 1/4 !important;
+    grid-row: 3/4 !important;
+    height: 300px;
+  }
+  .n1 {
+    background-position: center;
+    background-size: cover;
+  }
+  .n3 {
+    background-position: right;
+  }
+  .b1a {
+    display: grid;
+    grid-column: 1/4;
+  }
+  .grid-contB {
+    height: auto;
+    width: auto;
+    padding: 20px;
+  }
+  .grid-contB .foto {
+    grid-column: 1/4;
+  }
+}
+@media only screen and (max-width: 368px) {
+  .n3 {
+    background-position: 365px;
+  }
+  .formulario {
+    background-position: 430px;
+    color: #e2dfdb;
+  }
+  .formulario p {
+    color: #e2dfdb;
+    text-align: start;
+  }
+}/*# sourceMappingURL=estilos.css.map */
